@@ -1,7 +1,6 @@
 import { useState } from "react"
 
 export function ImgBoxes () {
-
     const [magic, setMagic] = useState(false)
 
     const handleClick = () => {
@@ -21,10 +20,10 @@ export function ImgBoxes () {
 
     return (
         <div>
-            <div id="boxes" className={isBig ? 'big' : ''}>
+            <div id="boxes" className={magic ? 'big' : ''}>
                 {createBoxes()}
             </div>
-            <button id="btn" onClick={toggleSize}>Toggle Size</button>
+            <button id="btn" onClick={handleClick}>Toggle Size</button>
         </div>
       );
 }
